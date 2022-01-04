@@ -51,6 +51,15 @@
         "js/bootstrap.js.map",
         "js/bootstrap.min.js.map"
       ]
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.js",
+        "jquery.min.map"
+      ]
     }
   ]
 }
