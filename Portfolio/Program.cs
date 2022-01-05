@@ -1,7 +1,20 @@
+using Portfolio.Utilities;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+if (!EnvUtility.IsDevelopmentEnv())
+{
+    //Add HSTS options for production environment
+    builder.Services.AddHsts(options =>
+    {
+        options.Preload = true;
+        options.IncludeSubDomains = true;
+        options.MaxAge = TimeSpan.FromHours(1);
+    });
+}
 
 WebApplication app = builder.Build();
 
