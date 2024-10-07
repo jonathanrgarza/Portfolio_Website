@@ -17,7 +17,7 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus, .btn:active:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -30,14 +30,14 @@ a.navbar-brand {
 }
 a.navbar-brand:hover,a.navbar-brand:focus {
   color: white;
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 a.nav-link {
   color: rgba(255, 255, 255, .75);
 }
 a.nav-link:hover,a.nav-link:focus {
   color: rgba(255, 255, 255, .75);
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 button.nav-link {
   color: #fff;
@@ -45,9 +45,10 @@ button.nav-link {
 button.nav-link:after {
   color: #fff;
 }
-button.nav-link:hover,button.nav-link:focus {
+button.nav-link:hover,button.nav-link:focus,button.nav-link:active:focus {
   color: #fff;
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 button.nav-link.active {
   font-weight: 600;
