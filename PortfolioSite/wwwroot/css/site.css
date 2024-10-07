@@ -1,82 +1,93 @@
 :root,
 [data-bs-theme="light"] {
-  /* Doesn't seem to work for color due to color modes */
+    --navbar-text-color: rgba(255, 255, 255, .65);
+    --navbar-brand-color: rgba(255, 255, 255, .85);
 }
 
 [data-bs-theme="dark"] {
-  /* Doesn't seem to work for color due to color modes */
+    color-scheme: dark;
+    --navbar-text-color: rgba(255, 255, 255, .65);
+    --navbar-brand-color: rgba(255, 255, 255, .85);
 }
 
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-  padding: 0.5rem;
-  color: white;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    padding: 0.5rem;
+    color: var(--navbar-brand-color);
 }
-a.navbar-brand:hover,a.navbar-brand:focus, a.navbar-brand:active:focus {
-  color: white;
-  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.04);
-  outline: none;
+
+a.navbar-brand:hover, a.navbar-brand:focus, a.navbar-brand:active:focus {
+    color: var(--navbar-brand-color);
+    box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.04);
+    outline: none;
 }
+
 a.nav-link {
-  color: rgba(255, 255, 255, .75);
+    color: var(--navbar-text-color);
 }
-a.nav-link:hover,a.nav-link:focus {
-  color: rgba(255, 255, 255, .75);
-  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.04);
+
+a.nav-link:hover, a.nav-link:focus {
+    color: var(--navbar-text-color);
+    box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.04);
 }
+
 button.nav-link {
-  color: #fff;
+    color: var(--navbar-text-color);
 }
+
 button.nav-link:after {
-  color: #fff;
+    color: var(--navbar-text-color);
 }
-button.nav-link:hover,button.nav-link:focus,button.nav-link:active:focus {
-  color: #fff;
-  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.04);
+
+button.nav-link:hover, button.nav-link:focus, button.nav-link:active:focus {
+    color: var(--navbar-text-color);
+    box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.04);
 }
+
 button.nav-link.active {
-  font-weight: 600;
-  color: #fff
-}
-
-a {
-  color: #0077cc;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+    font-weight: 600;
+    color: var(--navbar-text-color);
 }
 
 .theme-icon-active {
-  color: white;
+    color: var(--navbar-text-color);
 }
+
 .bi {
-  width: 1em;
-  height: 1em;
-  vertical-align: -.125em;
-  fill: currentcolor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
+
+a {
+    color: #0077cc;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
 }
