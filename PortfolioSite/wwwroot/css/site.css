@@ -28,8 +28,11 @@ a.navbar-brand {
   padding: 0.5rem;
   color: white;
 }
-a.navbar-brand:hover,a.navbar-brand:focus {
+a.navbar-brand:hover,a.navbar-brand:focus, a.navbar-brand:active:focus {
   color: white;
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.04);
+  outline: none;
 }
 a.nav-link {
   color: rgba(255, 255, 255, .75);
