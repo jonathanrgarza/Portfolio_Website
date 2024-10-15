@@ -2,15 +2,18 @@
 [data-bs-theme="light"] {
     --navbar-text-color: rgba(255, 255, 255, .65);
     --navbar-brand-color: rgba(255, 255, 255, .85);
+
 }
 
 [data-bs-theme="dark"] {
     color-scheme: dark;
     --navbar-text-color: rgba(255, 255, 255, .65);
     --navbar-brand-color: rgba(255, 255, 255, .85);
+
 }
 
 html {
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
 }
 
@@ -84,10 +87,71 @@ a {
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin-bottom: 60px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 0 60px;
+}
+
+section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Baloo 2", sans-serif;
+}
+
+h1.name {
+    font-weight: 900;
+    line-height: 103%;
+    margin: 0;
+}
+
+.underlay-container {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+    display: block;
+}
+
+.underlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -3;
+}
+
+.underlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    filter: brightness(80%); /* Adjust the brightness to make the image less bright */
+    pointer-events: none; /* Ensures the image is not clickable */
+}
+
+.underlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(45, 49, 53, 0.75);
 }
